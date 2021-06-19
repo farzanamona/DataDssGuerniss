@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Guerniss</string>
+    <string name="category">Products</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="eye">Eye</string>
+    <string name="face">Face</string>
+    <string name="lip">Lip</string>
+    <string name="makeup">Makeup</string>
+    <string name="nail">Nail</string>
+    <string name="skincare">Skincare</string>
+    <string name="serum">Serum</string>
+    <string name="haircare">Haircare</string>
+    <string name="accessories">Accessories</string>
+    <string name="event">Event</string>
+    <string name="faq">FAQ</string>
+    <string name="cart">Cart</string>
+    <string name="app_update_available"> Update Available!</string>
+    <string name="app_update_text"> Do you want to update?</string>
+
+</resources>

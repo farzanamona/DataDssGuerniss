@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent">
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/app_name"
+             android:textColor="@color/white"
+             android:textSize="@dimen/_15sdp"
+             android:layout_centerVertical="true"
+             android:layout_alignParentLeft="true"
+             />
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             >
+             <de.hdodenhof.circleimageview.CircleImageView
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/profile_image"
+                 android:layout_width="@dimen/_40sdp"
+                 android:layout_height="@dimen/_40sdp"
+                 android:src="@mipmap/ic_launcher"
+                 app:civ_border_width="0dp"
+                 android:layout_alignParentRight="true"
+                 app:civ_border_color="#FF000000"
+                 tools:ignore="MissingClass" />
+
+             <de.hdodenhof.circleimageview.CircleImageView
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/cart"
+                 android:layout_width="@dimen/_25sdp"
+                 android:layout_height="@dimen/_25sdp"
+                 android:layout_marginTop="@dimen/_8sdp"
+                 android:src="@drawable/ic_shopping_cart_black_24dp"
+                 app:civ_border_width="0dp"
+                 android:layout_marginRight="@dimen/_5sdp"
+                 android:layout_toLeftOf="@+id/profile_image"
+                 app:civ_border_color="#FF000000"
+                 tools:ignore="MissingClass,VectorDrawableCompat" />
+             <de.hdodenhof.circleimageview.CircleImageView
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/search"
+                 android:layout_width="@dimen/_25sdp"
+                 android:layout_height="@dimen/_25sdp"
+                 android:layout_marginTop="@dimen/_8sdp"
+                 android:src="@drawable/ic_search_black_24dp"
+                 app:civ_border_width="0dp"
+                 android:layout_marginRight="@dimen/_5sdp"
+                 android:layout_toLeftOf="@+id/cart"
+                 app:civ_border_color="#FF000000"
+                 tools:ignore="MissingClass,VectorDrawableCompat" />
+         </RelativeLayout>
+
+    </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Main drawer layout-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        tools:context=".main.MainActivity"
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!-- Your content area -->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/quizeViewpager"
+                        android:layout_width="@dimen/_310sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="#BDBDBD"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:text="Categories"
+                        android:textColor="@color/Block"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/eyeLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/eye" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Eye"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/faceLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/highlighter" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Face"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/lipsLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/lipa" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Lips"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/makeupLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/makeupaa" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Makeup"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/nailLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/nail_a" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Nail"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/skincareLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/skincarea" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Skincare"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/serumLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/serumi" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Serum"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/haircareLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/shampooa" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Haircare"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/accessoriesLayout"
+                                android:layout_width="@dimen/_45sdp"
+                                android:layout_height="@dimen/_45sdp"
+                                android:background="@drawable/category_bg_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:src="@drawable/brush" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Accessories"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:scrollbarAlwaysDrawVerticalTrack="true" />
+                </LinearLayout>
+
+
+            </LinearLayout>>
+
+        </FrameLayout>
+</ScrollView>
+        <!-- The navigation view -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:menu="@menu/nav_admin_manu"
+            app:headerLayout="@layout/nav_header"
+            android:layout_gravity="start"
+            android:background="@color/red"
+            app:itemTextColor="@color/titlebar"
+            app:itemIconTint="@color/titlebar"
+            android:fitsSystemWindows="true"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>

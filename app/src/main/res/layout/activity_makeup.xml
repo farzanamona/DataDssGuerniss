@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MakeupActivity">
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subcategory_bg_shape"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makeup"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_15sdp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <androidx.drawerlayout.widget.DrawerLayout
+        tools:context=".main.MainActivity"
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!-- Your content area -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/makeupItem1"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/category_bg_shape"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kit"
+                            android:textColor="@color/Block"
+                            android:textSize="@dimen/_15sdp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fragementView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

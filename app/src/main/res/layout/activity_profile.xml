@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/login"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginRight="@dimen/_35sdp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_30sdp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_width="2dp"
+                android:layout_centerInParent="true"
+                app:civ_border_color="#FFFFFF"
+                android:id="@+id/imgProfile"
+                />
+            <ImageView
+                android:id="@+id/imgGallary"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_3sdp"
+                app:srcCompat="@drawable/ic_gallery"
+                />
+
+            <ImageView
+                android:id="@+id/imgCam"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+                />
+
+        </RelativeLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textColorHint="#FF4081"
+                >
+                <EditText
+                    android:id="@+id/etFiestName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="#FF4081"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    android:hint="First Name"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="@dimen/_17sdp"
+                    android:background="@drawable/round_shape_white"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+            <EditText
+                android:id="@+id/etlastname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#FF4081"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:hint="Last Name"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp"
+                android:background="@drawable/round_shape_white"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#FF4081"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:hint="E-Mail"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp"
+                android:background="@drawable/round_shape_white"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#FF4081"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:hint="Phone Number"
+                android:textAllCaps="false"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp"
+                android:background="@drawable/round_shape_white"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+            <EditText
+                android:id="@+id/etGender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#FF4081"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:hint="Gender"
+                android:text=""
+                android:focusable="false"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp"
+                android:background="@drawable/round_shape_white"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#FF4081"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:hint="Address"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp"
+                android:background="@drawable/round_shape_white"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+            <EditText
+                android:id="@+id/etDob"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="#FF4081"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:hint="Date Of Birth"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp"
+                android:background="@drawable/round_shape_white"
+                android:paddingLeft="@dimen/_10sdp"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            android:textColorHint="#FF4081"
+            >
+
+            <EditText
+                android:id="@+id/etAniversasry"
+                android:layout_width="fill_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/round_shape_white"
+                android:drawableTint="#FF4081"
+                android:hint="Marriage Anniversary"
+                android:inputType="date"
+                android:padding="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textSize="@dimen/_17sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:text="Update Profile"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/category_bg_shape"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

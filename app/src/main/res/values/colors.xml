@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#353376</color>
+    <color name="colorPrimaryDark">#353376</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="Block">#050505</color>
+    <color name="offWhite">#E7E6E6</color>
+    <color name="appBg">#0B0C11</color>
+    <color name="titlebar">#FFFFFF</color>
+    <color name="red">#C50202</color>
+    <color name="card">#FDDDDD</color>
+    <color name="white">#FFFFFF</color>
+</resources>

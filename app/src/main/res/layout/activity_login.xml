@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/log"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:src="@drawable/guerniss_logo_without_bg"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="invisible"
+        android:layout_height="@dimen/_30sdp"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginRight="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_person_black_24dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textColorHint="#A80909"
+                >
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="#CF050B"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    android:hint="    Mobile Number"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="@dimen/_17sdp"
+                    android:background="@drawable/category_bg_shape"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#fff"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginRight="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_lock_outline_black_24dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:textColorHint="#C80707"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#000"
+                >
+
+                <EditText
+                    android:id="@+id/etPass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/category_bg_shape"
+                    android:drawableTint="#DC0505"
+                    android:hint="    Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:padding="@dimen/_10sdp"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textSize="@dimen/_17sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/registertv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_15sdp"
+        android:text="Register Now!"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_gravity="center"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/round_shape_button_white"
+        android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

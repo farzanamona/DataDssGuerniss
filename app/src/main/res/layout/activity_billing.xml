@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/appBg"
+android:orientation="vertical"
+tools:context=".BillingActivity">
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:elevation="4dp"
+    android:visibility="gone"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/white_round_shape"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:inputType="text"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/white_round_shape"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/white_round_shape"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:inputType="text"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/white_round_shape"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:inputType="text"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/shahp_rect_radious_sky"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Pay Now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
